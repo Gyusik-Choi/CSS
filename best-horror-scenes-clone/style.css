@@ -1,0 +1,102 @@
+/* 추가해야할 사항 */
+/* 창 크기 줄여나가다가 어느정도 이하부터는 아예 반으로 나누지 않고 아래로 내려오게 변화  */
+/* header 클래스의 h1, h3 내용들의 양쪽 여백과 크기 줄여도 간격 유지하면서 박스 내에 존재하도록 */
+
+body {
+    display: block;
+    height: 100vh;
+    background-color: #f0eff0;
+    margin: 0;
+}
+
+/* 미디어쿼리 코드를 일반 코드의 아래로 놓으니 적용이 된다. */
+/* 미디어쿼리 코드가 위에 있으면 적용 안 된다. */
+
+header {
+    top: 0;
+    left: 0;
+    color: #e7473c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (min-width: 945px) {
+    header {
+        position: fixed;
+        width: 420px;
+    }
+}
+
+.top h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 50%;
+    margin-left: 10%;
+    /* text-align: justify; */
+}
+
+@media (min-width: 770px) and (max-width: 944px) {
+    .top h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 945px) {
+    .top h1 {
+        font-size: 4rem;
+    }
+}
+
+.bottom {
+    align-items: flex-start;
+    color: #e7473c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 1.4;
+}
+
+.bottom h3, .bottom p {
+    width: 50%;
+    margin-left: 10%;
+    /* text-align: justify; */
+    /* https://www.codingfactory.net/10658 */
+    word-break: break-all;
+}
+
+main {
+    height: 100vh;
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 945px) {
+    main {
+        padding-left: 420px;
+    }
+}
+
+.movie {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7473c;
+}
+
+.poster {
+    width: 100%;
+}
+
+.movie.__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie.__header h4 {
+    font-size: 1.5rem;
+}
+
+.movie .wrapper .question {
+    text-align: right;
+}
