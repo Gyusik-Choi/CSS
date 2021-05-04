@@ -1,0 +1,48 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 8vh;
+}
+
+.header__nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav__primary > li {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-right: 5vw;
+}
+
+.header__nav__secondary {
+    padding-left: 0px;
+    padding-right: 5vw;
+}
+
+.header__nav__secondary > li {
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-left: 5vw;
+}
+
+.main {
+    display: block;
+}
+
+.manicure {
+    display: flex;
+    flex-direction: row;
+}
+
+.manicure__half {
+    position: relative;
+    width: 50%;
+}
+
+.manicure__half img {
+    position: absolute;
+    width: 100%;
+}
